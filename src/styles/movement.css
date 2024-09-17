@@ -4,7 +4,7 @@
     height: 50px;
     /* border: 1px solid yellow; */
     /* background: yellow; */
-    background: url('/assets/img/mainChar/charIdleif.gif');
+    background: url('/Norsu-Surfers/assets/img/mainChar/charIdleif.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
@@ -42,24 +42,24 @@
 .main-char.right{
     background-position-y: 5px;
     background-position-y: 10px;
-    background: url('/assets/img/mainChar/charwalk.gif');
+    background: url('/Norsu-Surfers/assets/img/mainChar/charwalk.gif');
     background-size: contain;
 
 }.main-char.up{
     background-position-y: 5px;
     background-position-y: 10px;
-    background: url('/assets/img/mainChar/charwalk.gif');
+    background: url('/Norsu-Surfers/assets/img/mainChar/charwalk.gif');
     background-size: contain;
 }.main-char.left{
     background-position-y: 5px;
     background-position-y: 10px;
-    background: url('/assets/img/mainChar/charwalkleft.gif');
+    background: url('/Norsu-Surfers/assets/img/mainChar/charwalkleft.gif');
     background-size: contain;
    
 }.main-char.down{
     background-position-y: 5px;
     background-position-y: 10px;
-    background: url('/assets/img/mainChar/charwalkleft.gif');
+    background: url('/Norsu-Surfers/assets/img/mainChar/charwalkleft.gif');
     background-size: contain;
 }
 
@@ -114,7 +114,7 @@
      width: 50px;
     height: 50px;
     background: red;
-    background: url('/assets/img/leftEnemy1.gif');
+    background: url('/Norsu-Surfers/assets/img/leftEnemy1.gif');
     background-size: contain;
     position: absolute;
 }
@@ -123,7 +123,7 @@
   width: 50px;
   height: 50px;
   background: red;
-  background: url('/assets/img/leftEnemy1.gif');
+  background: url('/Norsu-Surfers/assets/img/leftEnemy1.gif');
   background-size: contain;
   position: absolute;
 }
@@ -131,7 +131,7 @@
   width: 50px;
   height: 50px;
   background: red;
-  background: url('/assets/img/rightEnemy1.gif');
+  background: url('/Norsu-Surfers/assets/img/rightEnemy1.gif');
   background-size: contain;
   position: absolute;
 }
