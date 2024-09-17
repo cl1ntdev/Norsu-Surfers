@@ -297,7 +297,7 @@ h1{
     position: absolute;
 }
 .coin-base{
-  /* z-index: 4; */
+  z-index: 3;
   width: 30px;
   height: 30px;
   background: url('/assets/img/spawnables/coin.gif');
