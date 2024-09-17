@@ -297,10 +297,10 @@ h1{
     position: absolute;
 }
 .coin-base{
-  z-index: 3;
+/*   z-index: 3; */
   width: 30px;
   height: 30px;
-  background: url('/assets/img/spawnables/coin.gif');
+  background: url('/Norsu-Surfers/assets/img/spawnables/coin.gif');
   background-size: contain;
     position: absolute;
     /* border: 1px solid white; */
