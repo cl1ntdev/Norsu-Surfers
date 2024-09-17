@@ -19,7 +19,7 @@ body{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('/assets/img/bezel.png');
+  background: url('/Norsu-Surfers/assets/img/bezel.png');
   background-size: contain;
   z-index: 1;
 }
@@ -27,14 +27,14 @@ body{
   z-index: 5;
   width: 100%;
   height: 100%;
-  background: url('/assets/img/scanlines.png');
+  background: url('/Norsu-Surfers/assets/img/scanlines.png');
   animation: 1s flicker-scan linear infinite;
 }
 .main-bg{
   top: 5%;
   position: absolute;
   filter: blur(10px);
-  background: url('/assets/img/bg.png');
+  background: url('/Norsu-Surfers/assets/img/bg.png');
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -328,13 +328,13 @@ h1{
 .power.speed{
   width: 40px;
   height: 40px;
-  background: url('/assets/img/power/speed.png');
+  background: url('/Norsu-Surfers/assets/img/power/speed.png');
   background-size: cover;
 }
 .power.immune{
   width: 40px;
   height: 40px;
-  background: url('/assets/img/power/immune.png');
+  background: url('/Norsu-Surfers/assets/img/power/immune.png');
   background-size: cover;
 }
 /* START GAME DESIGNES */
