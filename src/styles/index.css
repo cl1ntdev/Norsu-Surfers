@@ -1,0 +1,442 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Public Pixel',sans-serif;
+}
+
+body{
+  overflow: hidden;
+    background: black;
+    
+}
+/* DEFUALT VAL */
+.score,.hearts,.start-game,.loading{
+    position: absolute;
+}
+
+.bezel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/img/bezel.png');
+  background-size: contain;
+  z-index: 1;
+}
+.scan-lines{
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/img/scanlines.png');
+  animation: 1s flicker-scan linear infinite;
+}
+.main-bg{
+  top: 5%;
+  position: absolute;
+  filter: blur(10px);
+  background: url('/assets/img/bg.png');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.main-bg.game{
+  filter: blur(0px);
+}
+.player-heart{
+  color: red;
+}
+/* 120, 75 */
+section{
+  position: relative;
+  z-index: 1;
+    width: 145vh; 
+    height: 90vh;
+    /* border: 1px solid white; */
+    overflow: hidden;
+}
+.line-container{
+    justify-content: center;
+    display: flex;
+    position: absolute;
+}
+.crt-line{
+    display: none;
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    /* margin: 2px; */
+    height: 1px;
+    z-index: 1;
+}
+.crt-line.flick{
+    display: block;
+    animation: 1s ease flicker infinite;
+}
+@keyframes flicker {
+    0% {
+      opacity: 0.27861;
+    }
+    5% {
+      opacity: 0.34769;
+    }
+    10% {
+      opacity: 0.23604;
+    }
+    15% {
+      opacity: 0.90626;
+    }
+    20% {
+      opacity: 0.18128;
+    }
+    25% {
+      opacity: 0.83891;
+    }
+    30% {
+      opacity: 0.65583;
+    }
+    35% {
+      opacity: 0.67807;
+    }
+    40% {
+      opacity: 0.26559;
+    }
+    45% {
+      opacity: 0.84693;
+    }
+    50% {
+      opacity: 0.96019;
+    }
+    55% {
+      opacity: 0.08594;
+    }
+    60% {
+      opacity: 0.20313;
+    }
+    65% {
+      opacity: 0.71988;
+    }
+    70% {
+      opacity: 0.53455;
+    }
+    75% {
+      opacity: 0.37288;
+    }
+    80% {
+      opacity: 0.71428;
+    }
+    85% {
+      opacity: 0.70419;
+    }
+    90% {
+      opacity: 0.7003;
+    }
+    95% {
+      opacity: 0.36108;
+    }
+    100% {
+      opacity: 0.24387;
+    }
+  }
+  
+  .crt::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+  }
+  .crt::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+  .crt {
+    animation: textShadow 1.6s infinite;
+  }
+  
+  
+.game{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.game-phase{
+  top: 7%;
+  left: 5%;
+  position: absolute;
+  width: 90%;
+  height: 85%;
+  /* border: 1px solid rgb(255, 0, 0); */
+}
+.game-status{
+  z-index: 5;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+}
+
+.game-over-txt{
+  font-size: 500%;
+}
+
+.player-end-score-time{
+  font-size: 250%;
+}
+
+.game-container{
+    background: rgb(45, 37, 37);
+    position: relative;
+    margin-top: 5%;
+    box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.gane-phase{
+  z-index: 2;
+  position: absolute;
+  border: 1px solid green;
+  width: 100%;
+  height: 100%;
+}
+
+.goal-letters{
+    font-size: 110%;
+    margin: .5%;
+    color: white;
+}
+.game-notif{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 4%;
+    /* right: 0%; */
+    /* margin-top: 10%; */
+    /* border: 1px solid green; */
+    margin-left: 45%;
+    margin-right: 45%;
+}
+/* .pause{
+  position: absolute;
+  top: 92%;
+  left: 24%;
+} */
+.timer-show{
+  position: absolute;
+  z-index: 999;
+  top: 87%;
+  left: 15%;
+}
+
+.eSpawn{
+  position: absolute;
+  width: 100px;
+  height: 85%;
+  top: 7%;
+  background: yellow;
+}
+
+.spawn1{
+  left: -20%;
+}
+
+.spawn2{
+  right: -20%;
+}
+
+.power{
+  position: absolute;
+}
+
+/* .
+game-notif  */
+h1{
+    font-size: 200%;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+
+    color: white;
+}
+
+
+
+.hearts{
+    top: 15%;
+    left: 5%;
+    align-items: center;
+    justify-self: center;
+    /* display: flex;  */
+    gap: 10%;  
+}
+.score{
+  z-index: 99;
+  position: absolute;
+    top: 87%;
+    left: 83%;
+    color: rgb(250, 250, 52);
+}
+
+.letter-base{
+  font-size: 200%;
+  color: rgb(0, 81, 255);
+    position: absolute;
+}
+.coin-base{
+  /* z-index: 4; */
+  width: 30px;
+  height: 30px;
+  background: url('/assets/img/spawnables/coin.gif');
+  background-size: contain;
+    position: absolute;
+    /* border: 1px solid white; */
+}
+.coin-base.fade{
+  animation: 1s flicker linear infinite;
+}
+
+.power-up-show{
+  position: absolute;
+  right:1%;
+  z-index: 3;
+}
+
+.cur-power-up{
+  position: relative;
+  color: white;
+}
+
+
+.cur-power-up.fade{
+  animation: 1s flicker linear infinite;
+}
+
+.power.speed{
+  width: 40px;
+  height: 40px;
+  background: url('/assets/img/power/speed.png');
+  background-size: cover;
+}
+.power.immune{
+  width: 40px;
+  height: 40px;
+  background: url('/assets/img/power/immune.png');
+  background-size: cover;
+}
+/* START GAME DESIGNES */
+
+.start-game{
+  top: 1%;
+    z-index: 9999;
+    position: absolute;
+    /* border: 1px solid pink; */
+    width: 100%;
+    height: 100%; 
+    bottom: 89%;
+    /* margin-top: 20%;
+    margin-left: 35%;
+    margin-right: 35%;  */
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+.logo{
+  top: 9%;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+}
+/* .start-button,.logo{
+    margin-left: 30%;
+} */
+
+.title{
+  color: rgb(255, 255, 255);
+  width: auto;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  font-size: 700%;
+  animation: 0.1 flicker-scan linear infinite;
+}
+.title-auth{
+  color: rgb(255, 255, 255);
+  width: auto;
+  position: absolute;
+  top: 54%;
+  left: 15%;
+  /* font-size: 500%; */
+  animation: 0.1 flicker-scan linear infinite;
+}
+
+.start-button{
+  border: none;
+  animation: 0.1 flicker-scan linear infinite;
+  color: white;
+  background: none;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    font-size: 120%;
+}
+
+
+/* WDAWDDDDDDDDDDDd */
+
+@keyframes flicker-scan {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  
+ 
+  
+  40% {
+    opacity: 0.26559;
+  }
+ 
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+ 
+  75% {
+    opacity: 0.37288;
+  }
+ 
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}

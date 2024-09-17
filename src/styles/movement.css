@@ -1,0 +1,137 @@
+.main-char{
+  z-index: 1;
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid yellow; */
+    /* background: yellow; */
+    background: url('/assets/img/mainChar/charIdleif.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-position-y: 5px;
+    background-position-y: 10px;
+    position: absolute;
+    /* top: 45%;
+    left: 45%; */
+    top: 300px;
+    left: 450px;
+    /* z-index: 2; */
+}
+
+.main-char.grow{
+  animation: 1s grow forwards;
+}
+@keyframes grow {
+ 0%{
+  width: 50px;
+  height: 50px;
+ }25%{
+  width: 70px;
+  height: 70px;
+ }50%{
+  width: 60px;
+  height: 60px;
+ }75%{
+  width: 80px;
+  height:80px;
+ }100%{
+  width: 100px;
+  height: 100px;
+ }
+}
+.main-char.right{
+    background-position-y: 5px;
+    background-position-y: 10px;
+    background: url('/assets/img/mainChar/charwalk.gif');
+    background-size: contain;
+
+}.main-char.up{
+    background-position-y: 5px;
+    background-position-y: 10px;
+    background: url('/assets/img/mainChar/charwalk.gif');
+    background-size: contain;
+}.main-char.left{
+    background-position-y: 5px;
+    background-position-y: 10px;
+    background: url('/assets/img/mainChar/charwalkleft.gif');
+    background-size: contain;
+   
+}.main-char.down{
+    background-position-y: 5px;
+    background-position-y: 10px;
+    background: url('/assets/img/mainChar/charwalkleft.gif');
+    background-size: contain;
+}
+
+.main-char.damaged{
+    animation: 1s flicker linear infinite;
+}
+
+
+
+@keyframes flicker {
+    0% {
+      opacity: 0.27861;
+    }
+    5% {
+      opacity: 0.34769;
+    }
+    10% {
+      opacity: 0.23604;
+    }
+    15% {
+      opacity: 0.90626;
+    }
+    20% {
+      opacity: 0.18128;
+    }
+    25% {
+      opacity: 0.83891;
+    }
+    30% {
+      opacity: 0.65583;
+    }
+    35% {
+      opacity: 0.67807;
+    }
+    40% {
+      opacity: 0.26559;
+    }
+    45% {
+      opacity: 0.84693;
+    }
+    50% {
+      opacity: 0.96019;
+    }
+    
+    
+  }
+/* ENEMEY TYPE SHIT */
+
+
+
+.enemy{
+     width: 50px;
+    height: 50px;
+    background: red;
+    background: url('/assets/img/leftEnemy1.gif');
+    background-size: contain;
+    position: absolute;
+}
+
+.enemy.right{
+  width: 50px;
+  height: 50px;
+  background: red;
+  background: url('/assets/img/leftEnemy1.gif');
+  background-size: contain;
+  position: absolute;
+}
+.enemy.left{
+  width: 50px;
+  height: 50px;
+  background: red;
+  background: url('/assets/img/rightEnemy1.gif');
+  background-size: contain;
+  position: absolute;
+}

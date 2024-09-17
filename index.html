@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORSU SURFERS</title>
+    <link rel="stylesheet" href="/src/styles/index.css">
+    <link rel="stylesheet" href="/src/styles/movement.css">
+    <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
+</head>
+<body>
+    <div class="game">
+        
+        <div class="game-notif">
+           
+        </div>
+        <div class="score-board" style="display: none;">
+            <div class="hearts">
+                <h1 class="player-heart"> &lt;3 </h1>
+                <h1 class="player-heart"> &lt;3 </h1>
+                <h1 class="player-heart"> &lt;3</h1>
+            </div>
+            <h1 class="score">0</h1>
+        </div>
+        <!-- <div class="pause" style="display: none;">
+            <h1>II</h1>
+        </div>  -->
+        <div class="timer-show" style="display: none;">
+            <h1 class="timer">00</h1>
+        </div>       
+        <div class="power-up-show" style="display: none;"></div>
+        
+
+
+        <section class="game-container">
+            <div class="game-over"></div>
+            <div class="bezel"></div>
+            <div class="main-bg"></div>
+
+            <div class="scan-lines"></div>
+            <div class="lines-container">
+
+            <div class="enemy-spawn-points">
+                <div class="eSpawn spawn1" location="left"></div>
+                <div class="eSpawn spawn2" location="right"></div>
+            </div> 
+
+            </div>
+            <div class="loading" style="display: none;"></div>
+
+            
+            <div class="start-game" style="display: block;">
+                <h1 class="title">NORSU SURFERS</h1>
+                <h6 class="title-auth">By: Clint Jay Estrellanes</h6>
+                <button class="start-button"> > START GAME</button>
+            </div>
+            <div class="game-phase" style="display: none;">
+                
+                <div class="main-char"></div>
+                
+            </div>
+        </section>
+    </div>
+    <audio id="bg-music" src="/assets/sound/bg-music.mp3"></audio>
+    <audio id="coin" src="/assets/sound/coin.mp3"></audio>
+    <audio id="damaged" src="/assets/sound/damaged.mp3"></audio>
+    <script src="/src/class/mainClass.js"></script>
+    <script src="/src/scripts/global.js"></script>
+    <script src="/src/scripts/spawning.js"></script>
+    <script src="/src/scripts/controls.js"></script>
+    <script src="/src/styles/crt.js"></script>
+    <script src="/src/scripts/enemySpawning.js"></script>
+    <script src="/src/scripts/timer.js"></script>
+    <script src="/src/scripts/index.js" type="module"></script>
+</body>
+</html>
