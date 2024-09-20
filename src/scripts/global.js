@@ -2,13 +2,16 @@ var isGameStart = false;
 var mainCharBase = document.querySelector('.main-char')
 var score = 0;
 var isGameOver = false;
-const defaultVelo = 8
+const defaultVelo = 3
 var playerEndTime = 0
 var pWidthHeight = 50
 
 
-const gameContainer = document.querySelector('.game-container');
+var gameContainer = document.querySelector('.game-container');
+var gameContainerRect = gameContainer.getBoundingClientRect()
 var gamePhase = document.querySelector('.game-phase')
+var gamePhaseRect = gamePhase.getBoundingClientRect()
+
 //controls for main character, used for collision in spawning
 const words = "I LOVE NEGROS ORIENTAL STATE UNIVERSITY";
 const removeSpace = (w) =>{
@@ -31,7 +34,7 @@ var allLettersGoal = document.querySelectorAll('.goal-letters')
     var obtainedAtt = allLettersGoal[i].getAttribute('obtained')
         if(allLettersGoal[i].innerText == letter && obtainedAtt == "false"){
          allLettersGoal[i].setAttribute('obtained',true)
-         allLettersGoal[i].style.color = 'blue'
+         allLettersGoal[i].classList.add('achieved')
          checkObtained();
             return
         }
@@ -105,12 +108,12 @@ const checkPowerUp = () =>{
     
     var powerUpChecker = setInterval(()=>{
         
-        console.log(pWidthHeight)
+        // console.log(pWidthHeight)
         
         var allPowerUp = document.querySelectorAll('.cur-power-up')
         for(let i = 0;i<allPowerUp.length;i++){
             if(allPowerUp[i].innerText == 'speed'){
-                velo = 15;
+                velo = 6;
             }else if(allPowerUp[i].innerText == 'immune'){
                 isImmune = true
                 // var add = 2;

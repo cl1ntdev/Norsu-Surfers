@@ -5,8 +5,10 @@
     font-family: 'Public Pixel',sans-serif;
 }
 
+
+/* overflow to hide spaawninigng */
 body{
-  overflow: hidden;
+  /* overflow: hidden;  */
     background: black;
     
 }
@@ -23,6 +25,16 @@ body{
   background-size: contain;
   z-index: 1;
 }
+
+.warning-line{
+  z-index: 1;
+  position: absolute;
+  width:100%;
+  background-color: red;
+  height: 5px;
+  animation: 1s flicker linear infinite;
+}
+
 .scan-lines{
   z-index: 5;
   width: 100%;
@@ -34,7 +46,7 @@ body{
   top: 5%;
   position: absolute;
   filter: blur(10px);
-  background: url('/Norsu-Surfers/assets/img/bg.png');
+  background: url('/Norsu-Surfers/assets/img/bg2.png');
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -214,10 +226,38 @@ section{
 }
 
 .goal-letters{
+  
+text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
     font-size: 110%;
     margin: .5%;
     color: white;
 }
+.goal-letters.achieved{
+  text-shadow: 0 1px 0 #018016, 
+               0 2px 0 #05772f,
+               0 3px 0 #05772f,
+               0 4px 0 #05772f,
+               0 5px 0 #05772f,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               color: rgb(35, 255, 112);
+              }
 .game-notif{
     position: absolute;
     align-items: center;
@@ -243,6 +283,7 @@ section{
 }
 
 .eSpawn{
+  /* z-index: 10; */
   position: absolute;
   width: 100px;
   height: 85%;
@@ -251,11 +292,11 @@ section{
 }
 
 .spawn1{
-  left: -20%;
+  left: -100%;
 }
 
 .spawn2{
-  right: -20%;
+  right: -100%;
 }
 
 .power{
@@ -292,8 +333,20 @@ h1{
 }
 
 .letter-base{
+text-shadow: 0 1px 0 #018016, 
+               0 2px 0 #05772f,
+               0 3px 0 #05772f,
+               0 4px 0 #05772f,
+               0 5px 0 #05772f,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
   font-size: 200%;
-  color: rgb(0, 81, 255);
+  color: rgb(35, 255, 112);
     position: absolute;
 }
 .coin-base{
@@ -320,8 +373,8 @@ h1{
   color: white;
 }
 
-
-.cur-power-up.fade{
+/* for the text to fade */
+.cur-power-up.fade{ 
   animation: 1s flicker linear infinite;
 }
 
@@ -336,6 +389,11 @@ h1{
   height: 40px;
   background: url('/Norsu-Surfers/assets/img/power/immune.png');
   background-size: cover;
+}
+/* for the img to fade */
+.power.fade{
+  animation: 1s flicker linear infinite;
+
 }
 /* START GAME DESIGNES */
 
@@ -367,16 +425,40 @@ h1{
 } */
 
 .title{
+text-shadow: 0 1px 0 #ccc, 
+0 2px 0 #c9c9c9,
+0 3px 0 #bbb,
+0 4px 0 #b9b9b9,
+0 5px 0 #aaa,
+0 6px 1px rgba(0,0,0,.1),
+0 0 5px rgba(0,0,0,.1),
+0 1px 3px rgba(0,0,0,.3),
+0 3px 5px rgba(0,0,0,.2),
+0 5px 10px rgba(0,0,0,.25),
+0 10px 10px rgba(0,0,0,.2),
+0 20px 20px rgba(0,0,0,.15);
   color: rgb(255, 255, 255);
   width: auto;
   position: absolute;
   top: 20%;
   left: 15%;
   font-size: 700%;
-  animation: 0.1 flicker-scan linear infinite;
+  animation: 0.1 flicker linear infinite;
 }
-.title-auth{
-  color: rgb(255, 255, 255);
+.title-auth{ 
+text-shadow: 0 1px 0 #ccc, 
+0 2px 0 #c9c9c9,
+0 3px 0 #bbb,
+0 4px 0 #b9b9b9,
+0 5px 0 #aaa,
+0 6px 1px rgba(0,0,0,.1),
+0 0 5px rgba(0,0,0,.1),
+0 1px 3px rgba(0,0,0,.3),
+0 3px 5px rgba(0,0,0,.2),
+0 5px 10px rgba(0,0,0,.25),
+0 10px 10px rgba(0,0,0,.2),
+0 20px 20px rgba(0,0,0,.15);
+  color: #FFFF;
   width: auto;
   position: absolute;
   top: 54%;
@@ -386,6 +468,7 @@ h1{
 }
 
 .start-button{
+  cursor: pointer;
   border: none;
   animation: 0.1 flicker-scan linear infinite;
   color: white;

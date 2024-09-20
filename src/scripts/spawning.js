@@ -2,7 +2,7 @@
 const powerUpShow = document.querySelector('.power-up-show')
 const spawnLettersInterval = 3000;
 const spawnCoinsInterval = 1500;
-const pwrSpawnTime = 2000;
+const pwrSpawnTime = 7000;
 var isOn = true; //debugging purposes
 
 // const words = [
@@ -142,7 +142,13 @@ const initSpawnCoins = () => {
                 letter.top < mcComRect.bottom &&
                 letter.bottom > mcComRect.top
             ) {
-                document.querySelector('#coin').play();
+                // document.querySelector('#coin').play();
+                const coinSound = document.createElement('audio')
+                coinSound.src = '/Norsu-Surfers/assets/sound/coin.mp3'
+                coinSound.play()
+                setTimeout(()=>{
+                    coinSound.remove()
+                },1000)
                 // Collision detected
                 newCoin.remove()
                 score++;
@@ -180,6 +186,7 @@ const initRandomPowerUp = () => {
         // console.log('working')
         var removeCoin = setTimeout(()=>{
             //animation of flickering
+            newPower.classList.add('fade')
             setTimeout(() => {
                 //remove
                 newPower.remove()
@@ -227,7 +234,7 @@ const initRandomPowerUp = () => {
                   
                     setTimeout(() => {
                         newPowerUpShow.remove()
-                        console.log('working')
+                        // console.log('working')
                         isImmune = false  
                     //     var decrement = 2;                  
                     //     var shrink = setInterval(() => {
@@ -246,7 +253,7 @@ const initRandomPowerUp = () => {
                     //         clearInterval(shrink)
                     //     }
                     // }, 16); // Adjust to around 60fps (16ms per frame)
-                    }, 5000);// 5 sec immune
+                    }, 6000);// 5 sec immune
                 }
             } 
         }, 1);
